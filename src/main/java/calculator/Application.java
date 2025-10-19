@@ -7,13 +7,16 @@ public class Application {
         String input = Console.readLine();
 
         if (input.startsWith("//")) {
-            int a = input.indexOf("//");
-            int b = input.indexOf("\n");
-            String i = input.substring(a + 2, b);
+            int a = input.indexOf("\n");
+            String i = input.substring(2, a);
+            String numbers = input.substring(a + 1);
+
+            String[] arr = numbers.split("[,:]|" + i);
 
 
 
         } else {
+            String[] arr = input.split("[,:]");
 
 
 
