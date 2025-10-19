@@ -13,12 +13,16 @@ public class Application {
 
             String[] arr = numbers.split("[,:]|" + i);
             ifError(arr);
+            int sum = sumNumber(arr);
+            System.out.println("결과 : " + sum);
 
 
 
         } else {
             String[] arr = input.split("[,:]");
             ifError(arr);
+            int sum = sumNumber(arr);
+            System.out.println("결과 : " + sum);
 
 
 
@@ -32,5 +36,13 @@ public class Application {
                 throw new IllegalArgumentException("음수는 허용되지 않습니다.");
             }
         }
+    }
+
+    public static int sumNumber(String arr[]) {
+        int sum = 0;
+        for (int j = 0; j < arr.length; j++) {
+            sum += Integer.parseInt(arr[j]);
+        }
+        return sum;
     }
 }
