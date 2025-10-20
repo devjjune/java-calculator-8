@@ -13,11 +13,8 @@ public class InputParser {
             String numbers = input.substring(a + 2);
 
             return numbers.split("[,:]|" + i);
-
         }
 
         return input.split("[,:]");
-
     }
-
 }

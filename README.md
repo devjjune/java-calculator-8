@@ -28,15 +28,19 @@
 - 처음에는 1번에서 입력받자마자 검사하려 했으나, 커스텀 구분자까지 오류로 검출될 가능성 있음
 - 3번에서 숫자 부분을 분리한 후 검사하기로 함
   <br/>
-### 3. 메서드로 기능 분리
+3. 메서드로 기능 분리
 - `IllegalArgumentException` 상황 검증 → `ifError()` 메서드
 - 문자열의 숫자 부분 더하기 → `sumNumber()` 메서드
+
 <br/>
 
 ## 🔧 리팩토링 및 점검
+
 1. 구조 리팩토링 (클래스 책임 분리)
 - 하나의 클래스는 하나의 책임만 갖도록 클래스를 분리한다.
 `InputHandler`: 입력값 받기
 `InputParser`: 구분자를 기준으로 숫자 부분 분리
 `Validator`: 예외 처리
 `StringAddCalculator`: 자른 문자열의 숫자 부분 변환 후 합산
+<br/>
+2. Google Java Style Guide 형식 적용
