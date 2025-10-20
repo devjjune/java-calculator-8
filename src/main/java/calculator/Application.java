@@ -9,17 +9,11 @@ public class Application {
         int summed = 0;
         String input = InputHandler.readInput();
 
-        try {
-            numWords = InputParser.parse(input);
-            summed = StringAddCalculator.sumNumber(numWords);
+        numWords = InputParser.parse(input);
+        summed = StringAddCalculator.sumNumber(numWords);
 
-            System.out.println("결과 : " + summed);
+        System.out.println("결과 : " + summed);
 
-        } catch (IllegalArgumentException e) {
-
-            System.out.println("입력 오류: " + e.getMessage());
-
-        }
 
     }
 
