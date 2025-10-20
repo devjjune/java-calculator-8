@@ -44,3 +44,5 @@
 `StringAddCalculator`: 자른 문자열의 숫자 부분 변환 후 합산
 <br/>
 2. Google Java Style Guide 형식 적용
+<br/>
+3. 입력값 검증 로직 추가 (빈 문자열 혹은 공백 입력 시 예외 처리)
