@@ -5,35 +5,22 @@ import camp.nextstep.edu.missionutils.Console;
 public class Application {
     public static void main(String[] args) {
 
+        String[] numWords;
+        int summed = 0;
+        String input = InputHandler.readInput();
 
-        if (input.startsWith("//")) {
-            int a = input.indexOf("\\n");
-            if (a == -1) {
-                a = input.indexOf("\n");
-            }
+        try {
+            numWords = InputParser.parse(input);
+            summed = StringAddCalculator.sumNumber(numWords);
 
-            String i = input.substring(2, a);
-            String numbers = input.substring(a + 2);
+            System.out.println("결과 : " + summed);
 
-            String[] arr = numbers.split("[,:]|" + i);
-            ifError(arr);
-            int sum = sumNumber(arr);
-            System.out.println("결과 : " + sum);
+        } catch (IllegalArgumentException e) {
 
-
-
-        } else {
-            String[] arr = input.split("[,:]");
-            ifError(arr);
-            int sum = sumNumber(arr);
-            System.out.println("결과 : " + sum);
-
-
+            System.out.println("입력 오류: " + e.getMessage());
 
         }
+
     }
-
-
-
 
 }
